@@ -1,0 +1,143 @@
+/**panta de de aviso*/
+
+.popup{
+   display: block; 
+    z-index: 99999;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    overflow: visible;
+    height: 100%;
+    width: 100%;
+    background: #0b061f;
+}
+
+.contentbox{
+   position: relative;
+   width: 600px;
+   height: 400px;
+   background: #fff;
+   border-radius: 20px;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   display: flex;
+   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
+}
+ .contentbox .imgbx{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ .contentbox .imgbx::before{
+     content: '';
+     position: absolute;
+     width: 250px;
+     height: 250px;
+     background: #754ef9;
+     border-radius: 50%;
+ }
+ .contentbox .imgbx img{
+    position: relative;
+    max-width: 250px;
+    z-index: 1;
+ }
+
+ .contentbox .content{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+
+ .contentbox .content h3{
+    color: #333;
+    line-height: 1em;
+    font-weight: 300;
+    font-size: 3em;
+   
+ }
+
+ .contentbox .content h2{
+    font-size: 4em;
+    color: #fc4b08;
+    line-height: 1em;
+ }
+
+ .contentbox .content h2 span{
+        color: #333;
+        font-size: 0.75em;
+        text-transform: uppercase;
+ }
+ .contentbox .content p{
+    font-weight: 300;
+    font-size: 15px;
+    color: black;
+
+
+ }
+
+ .contentbox .content .continuar {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #754ef9;
+    color: #fff;
+    margin-top: 15px;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 15px;
+    cursor: pointer;
+ }
+
+ .close{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background: #754ef9  url(../img/close.png);
+    background-repeat: no-repeat;
+    background-size: 10px;
+    background-position: center;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+ }
+
+ @media (max-width : 767px) {
+    .contentbox{
+        width: 300px;
+        height: auto;
+        flex-direction: column;
+    }
+    .contentbox .imgbx{
+        height: 200px;
+        transform: translateY(-50px);
+    }
+
+    .contentbox .imgbx::before{
+        background: #754ef9;
+    }
+    .contentbox .content{
+        height: auto;
+        text-align: center;
+        padding: 20px;
+        padding-top: 0;
+    }
+
+    .close{
+        top: -50px;
+        left: -10px;
+        background: #754ef9  url(../img/close.png);
+        background-repeat: no-repeat;
+        background-size: 10px;
+        background-position: center;
+    }
+ }
