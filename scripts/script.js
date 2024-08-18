@@ -1,3 +1,7 @@
+/*play music*/ 
+var audio = document.getElementById("play");
+  audio.volume = 0.1;
+
 /*-----------scroll section active----------------*/
 let sections = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('header nav a');
