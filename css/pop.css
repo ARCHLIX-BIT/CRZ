@@ -38,7 +38,6 @@
      position: absolute;
      width: 250px;
      height: 250px;
-     background: #754ef9;
      border-radius: 50%;
  }
  .contentbox .imgbx img{
@@ -122,9 +121,9 @@
         transform: translateY(-50px);
     }
 
-    .contentbox .imgbx::before{
+    /*.contentbox .imgbx::before{
         background: #754ef9;
-    }
+    }*/
     .contentbox .content{
         height: auto;
         text-align: center;
